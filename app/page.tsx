@@ -74,10 +74,10 @@ export default function Home() {
 
         <div className="flex flex-col mb-12 w-full items-center relative z-10 ">
           {/* Logo Container */}
-          <div className="mb-4">
+          <div className="mb-4 overflow-hidden rounded-3xl">
             <Link href="/" className="flex justify-center">
               <Image
-                src="/uploads/logo7.png"
+                src="/uploads/logo10.png"
                 alt="JANE"
                 width={120}
                 height={40}
