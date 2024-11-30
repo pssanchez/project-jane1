@@ -6,22 +6,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
 
   return (
-    <div className="min-h-screen bg-white">
-      <header className="container mx-auto px-4 py-6">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+    <div className="min-h-screen bg-gray-50">
+      <header className="container mx-auto px-4 py-8 bg-white shadow-md">
+        <div className="flex flex-col items-center justify-between md:flex-row">
+          <div className="flex items-center gap-2 mb-4 md:mb-0">
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/uploads/logo.svg"
                 alt="Jane Logo"
                 width={120}
                 height={40}
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
           </div>
           
-          <nav className="flex items-center gap-8">
+          <nav className="flex items-center gap-8 mb-4 md:mb-0">
             <Link 
               href="/" 
               className={`text-lg ${pathname === '/' ? 'text-[#E4A853]' : 'text-black'}`}
@@ -62,7 +62,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </header>
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto px-4 py-8">
         {children}
       </main>
     </div>
